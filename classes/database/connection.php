@@ -82,7 +82,8 @@ abstract class Database_Connection
 			new $driver($name, $config);
 		}
 
-		return static::$instances[$name];
+		$instance = static::$instances[$name];
+		return $instance;
 	}
 
 	/**
